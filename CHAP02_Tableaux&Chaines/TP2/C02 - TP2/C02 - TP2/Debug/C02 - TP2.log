@@ -1,0 +1,9 @@
+﻿  Source.cpp
+e:\bts_sn\info\gremont\chap02 - programmation c\chap02 - tableaux & chaînes\tp2\c02 - tp2\c02 - tp2\source.cpp(18): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+e:\bts_sn\info\gremont\chap02 - programmation c\chap02 - tableaux & chaînes\tp2\c02 - tp2\c02 - tp2\source.cpp(28): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+e:\bts_sn\info\gremont\chap02 - programmation c\chap02 - tableaux & chaînes\tp2\c02 - tp2\c02 - tp2\source.cpp(38): warning C4552: '+' : résultat de l'expression non utilisé
+e:\bts_sn\info\gremont\chap02 - programmation c\chap02 - tableaux & chaînes\tp2\c02 - tp2\c02 - tp2\source.cpp(42): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+e:\bts_sn\info\gremont\chap02 - programmation c\chap02 - tableaux & chaînes\tp2\c02 - tp2\c02 - tp2\source.cpp(50): warning C4476: 'printf' : caractère de champ de type ',' inconnu dans le spécificateur de format
+e:\bts_sn\info\gremont\chap02 - programmation c\chap02 - tableaux & chaînes\tp2\c02 - tp2\c02 - tp2\source.cpp(50): warning C4474: 'printf' : trop d'arguments passés pour la chaîne de format
+  e:\bts_sn\info\gremont\chap02 - programmation c\chap02 - tableaux & chaînes\tp2\c02 - tp2\c02 - tp2\source.cpp(50): note: les espaces réservés et leurs paramètres attendent des arguments 0 variadiques, mais des arguments 1 ont été fournis
+  C02 - TP2.vcxproj -> E:\BTS_SN\Info\Gremont\CHAP02 - Programmation C\CHAP02 - Tableaux & Chaînes\TP2\C02 - TP2\Debug\C02 - TP2.exe
