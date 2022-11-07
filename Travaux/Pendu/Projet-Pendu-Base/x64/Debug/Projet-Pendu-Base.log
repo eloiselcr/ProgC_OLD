@@ -1,0 +1,8 @@
+﻿  dico.c
+c:\users\formation\documents\bts_sn\info\gremont\progc\travaux\pendu\projet-pendu-base\dico.c(34): warning C4013: 'nombreAleatoire' non défini(e) ; extern retournant int pris par défaut
+c:\users\formation\documents\bts_sn\info\gremont\progc\travaux\pendu\projet-pendu-base\dico.c(58): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  main.c
+c:\users\formation\documents\bts_sn\info\gremont\progc\travaux\pendu\projet-pendu-base\main.c(44): warning C4013: 'piocherMot' non défini(e) ; extern retournant int pris par défaut
+c:\users\formation\documents\bts_sn\info\gremont\progc\travaux\pendu\projet-pendu-base\main.c(46): warning C4267: '=' : conversion de 'size_t' en 'long', perte possible de données
+  Génération de code en cours...
+  Projet-Pendu-Base.vcxproj -> C:\Users\formation\Documents\BTS_SN\Info\Gremont\ProgC\Travaux\Pendu\x64\Debug\Projet-Pendu-Base.exe

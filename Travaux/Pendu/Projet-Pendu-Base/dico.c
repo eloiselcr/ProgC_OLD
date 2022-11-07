@@ -1,9 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
+
+// --- INCLUDE --- 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-
 #include "dico.h"
 
 int piocherMot(char * motPioche)
@@ -54,6 +55,7 @@ int piocherMot(char * motPioche)
 
 int nombreAleatoire(int nombreMax)
 {
-	// A implémenter ...
+	srand(time(NULL)); // générateur de nombre aléatoires avec srand
+	return (rand() % nombreMax); // nombre choisi au hasard 
 	return 0;
 }
