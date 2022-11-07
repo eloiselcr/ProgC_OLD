@@ -1,9 +1,11 @@
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
 #include <stdlib.h>
+
 
 
 // 0 / 6 Exercices 
@@ -17,17 +19,27 @@
 	// Dans main(), demandez à l’utilisateur d’entrer 2 valeurs x et y, puis grâce à la fonction
 	// puissance vous calculerez xpuissy et vous afficherez le résultat obtenu
 
+float puissance(float a, float b)
 
-int main(int argc, char ** argv)
-{
-	int a, b;
-	printf("Veuillez rentrer la valeur de x : ");
-	scanf("%d", &a);
-	printf("Veuillez rentrer la valeur de y : ");
-	scanf("%d", &b),
+int main{
+	printf("--- A a la puissance B ---")
+	float a, b;
+	printf("Entrez la valeur de A : ");
+	scanf("%f", &a);
+	printf("Entrez la valeur de B : ");
+	scanf("%f", &b);
 
+	printf("%f puissance %f - %f \n\n", a, b, puissance(n, b));
+
+	return 0;
 }
 
+float puissance(float a, float b)
+{
+	float resultat = 1;
+	resultat = pow(a, b);
+	return resultat;
+}
 
 // ------- Exercice 2 ------- 
 
