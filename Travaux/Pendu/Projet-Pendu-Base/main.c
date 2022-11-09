@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <math.h>
+#include <conio.h>
+#include <tchar.h>
 
 /*
 int main(int argc, char ** argv)
@@ -24,118 +27,67 @@ int main(int argc, char ** argv)
 }
 */
 
-// --- Initialisation des variables --- 
+// Le jeu du Pendu par Eloise Lecronier 
 
-int gagne(int lettreTrouvee[], long tailleMot);
-int rechercheLettre(char lettre, char motSecret[], int lettreTrouvee[]);
-char lireCaractere();
 
-int main(int argc, char* argv[])
+int main(int argc, char ** argv)
 {
-	char lettre = 0; // lettre rentree
-	char motRecherche[100] = { 0 }; // mot a trouver
-	int *lettreTrouvee = NULL; // booleens
-	long coupsDispo = 10; // compteur de coups 
-	long i = 0; // parcours du tableau 
-	long TailleMot = 0;
+	char motSecret[] = "ROUGE"; // mot recherche prealablement defini 
+	char * motEtoile = (char*)malloc((strlen(motSecret) + 1) * sizeof(char));
 
-	printf("Le jeu du Pendu \n\n");
-
-	if (!piocherMot(motRecherche))
-		exit(0);
-	TailleMot = strlen(motRecherche);
-	
-	lettreTrouvee = malloc(TailleMot * sizeof(int)); 
-	if (lettreTrouvee == NULL)
-		exit(0);
-	
-	for (i = 0; i < TailleMot; i++)
-		lettreTrouvee[i] = 0;
-
-
-
-	while (coupsDispo > 0 && !gagne(lettreTrouvee, TailleMot)) // tant que le joueur dispose de coups
+	for (int i = 0; i < strlen(motSecret); i++)
 	{
-		printf("\n\nIl vous reste %ld coups", coupsDispo);
-		printf("\n Quel est le mot choisi ? ");
-
-		for (i = 0; i < TailleMot; i++)
-		{
-			if (lettreTrouvee[i]) 
-				printf("%c", motRecherche[i]); 
-			else
-				printf("*"); 
-		}
-
-		printf("\nChoisissez votre lettre : ");
-		lettre = lireCaractere();
-
-
-
-		// --- Si PAS la bonne lettre --- 
-
-		if (!rechercheLettre(lettre, motRecherche, lettreTrouvee))
-		{
-			coupsDispo--; // On enleve un coup 
-		}
+		motEtoile[i] = '*';
+		motEtoile[strlen(motSecret)] = '\0';
 	}
 
+	char lettre_proposee; // lettre proposee par l'utilisateur 
+	int compteur_lettre = 0; // compteur que l'on augmente a chaque lettres trouves du mot Secret
+	int compteur_coups = 10; // compte les coups qu'ils restent
 
-	// --- Si le mot a ete trouve --- 
 
-	if (gagne(lettreTrouvee, TailleMot))
-		printf("\n\nBravo, le mot recherch� �tait : %s", motRecherche);
-	else
-		printf("\n\nAH AH AH Perdu ! Le mot recherch� �tait : %s", motRecherche);
+	printf("------ Bienvenue sur le Pendu ! ------\n\n");
+	printf("Un mot secret a ete choisi, a vous de le retrouver avant que le compteur ne tombe a 0 !\n\n");
 
-	free(lettreTrouvee); 
+	while (compteur_coups != 0) // tant que le compteur de coups n'est pas egal a 0
+	{
+		while (compteur_lettre != strlen(motSecret) && compteur_coups != 0) // tant que le compteur de lettre du mot secret est diff�rent 
+													// de la taille du mot secret
+		{
+			printf("Il vous reste %d coups a jouer\n", compteur_coups); // Etat du nombre de coups restant 
+			printf("Quel est le mot secret ? %s\n", motEtoile); // Etat du mot secret a trouver 
+			printf("Proposez une lettre : "); // demande de la lettre 
+			scanf_s("%c", &lettre_proposee); // on enregistre la lettre proposee 
+			while (getchar() != '\n');
+
+			int lettre_trouvee = 0;
+
+			for (int i = 0; i < strlen(motSecret); i++) // on parcours le motSecret
+			{
+
+				if (motSecret[i] == lettre_proposee)
+				{
+					compteur_lettre = compteur_lettre + 1; // augmentation du compteur de lettre 
+					printf("Bravo, la lettre se trouvait bien dans le mot\n\n");
+					lettre_trouvee = 1;
+				}
+			
+			}
+
+			if (lettre_trouvee == 0)
+			{
+				compteur_coups--;
+				printf_s("Dommage, pas de lettre correspondante !\n\n");
+			}
+		}
+
+		printf("Gagn� ! Le mot �tait bien %c\n", motSecret); // fin boucle compteur lettre, le mot a ete trouve car
+															 // la taille des deux correspondent
+	}
+		
+	printf("Perdu ! Le mot �tait %c\n", motSecret); // fin boucle compteur, le joueur a perdu car compteur = 0
 
 	return 0;
 }
 
 
-// --- Lecture du caractere ---
-
-char lireCaractere()
-{
-	char caractere = 0;
-	caractere = getchar(); // lit le premier caractere
-	caractere = toupper(caractere); // ajout majuscule si il n'y en a pas
-
-	// On lit les autres caracteres memorises
-
-	while (getchar() != '\n');
-
-	return caractere; // retourne premier caractre 
-}
-
-
-
-int gagne(int lettreTrouvee[], long TailleMot) 
-	{
-	long i = 0;
-	int joueurGagne = 1;
-	for (i = 0; i < TailleMot; i++)
-	{
-		if (lettreTrouvee[i] == 0)
-			joueurGagne = 0;
-	}
-	return joueurGagne;
-}
-
-int rechercheLettre(char lettre, char motRecherche[], int lettreTrouvee[])
-	{
-	long i = 0;
-	int bonneLettre = 0;
-
-	// parcours du motRecherche si la lettre correspond
-	for (i = 0; motRecherche[i] != '\0'; i++)
-	{
-		if (lettre == motRecherche[i]) // Si le check de la lettre ok
-		{
-			bonneLettre = 1; // memorise
-			lettreTrouvee[i] = 1; // 1 la case du tableau de booleens correspondant a la lettre actuelle
-		}
-	}
-	return bonneLettre;
-}
