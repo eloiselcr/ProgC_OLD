@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
@@ -15,20 +16,18 @@
 	//		float t[3][4];
 	// Ecrire le programme permettant de calculer, dans une variable nommée somme, la somme des éléments de t.
 
-/*
+
 int main(int argc, char ** argv)
 {
 	float t[3][4];
-
 	for (int j = 0; j < 4; j++)
 	{
-		for (int i = 0; i < 4; j++)
+		for (int i = 0; i < 3; i++)
 		{
-			printf("Entrez la valeur [%d][%d] : "), i, j);
-			scanf("%?", &t[i][j]);
+			printf("Entrez la valeur [%d][%d] : ", i, j);
+			scanf("%f", &t[i][j]);
 		}
 	}
-
 	float somme = 0;
 	for (int j = 0; j < 4; j++)
 	{
@@ -37,12 +36,10 @@ int main(int argc, char ** argv)
 			somme += t[i][j];
 		}
 	}
-
 	printf("La somme vaut %f\n", somme);
-
 	return 0;
 }
-*/
+
 
 
 // -------  Exercice 2 -------
@@ -62,7 +59,6 @@ int main(int argc, char ** argv)
 	float m[3];
 	int i = 0;
 	int j = 0;
-
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 4; j++)
@@ -70,7 +66,6 @@ int main(int argc, char ** argv)
 			t[i][j] = rand() % 100;
 		}
 	}
-
 	while (i < 3)
 	{
 		float somme = 0;
@@ -83,7 +78,6 @@ int main(int argc, char ** argv)
 		m[i] = somme / 4.0;
 		i++;
 	}
-
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 4; j++)
@@ -92,14 +86,10 @@ int main(int argc, char ** argv)
 		}
 		printf("\n");
 	}
-
 	for (int i = 0; i < 3; i++)
 	{
 		printf("Moyenne %d : %f\n", i + 1, m[i]);
 	}
-
 	return 0;
-
 }
 */
-

@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
@@ -6,7 +7,7 @@
 #include <conio.h>
 
 
-// 2 / 4 Exercices 
+// 3 / 4 Exercices 
 
 
 
@@ -16,15 +17,35 @@
 	// avant d’en chercher le plus grand et le plus petit.
 
 /*
-int main(int argc, char ** argv)
+int main(int argc, char** argv)
 {
+	int tab[10];
+	for (int i = 0; i < 10; i++)
+	{
+		printf("Entrez le nombre %d : ", i + 1);
+		scanf("%d", &tab[i]);
+	}
 
-
-
-
+	int min = tab[0];
+	int max = tab[0];
+	int i = 1;
+	while (i < 10)
+	{
+		if (tab[i] < min)
+		{
+			min = tab[i];
+		}
+		if (tab[i] > max)
+		{
+			max = tab[i];
+		}
+		i = i++;
+	}
+	printf("Le minimum du tableau est %d, le maximum est %d \n", min, max);
+	return 0;
 }
-
 */
+
 // -------  Exercice 2 -------
 
 	// Soient deux tableaux t1 et t2 déclarés ainsi :
