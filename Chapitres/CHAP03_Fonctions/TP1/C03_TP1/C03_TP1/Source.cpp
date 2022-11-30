@@ -11,18 +11,16 @@
 #include "ClientState.h"
 
 
-
-
-// 5 / 6 Exercices 
+// 6 / 6 Exercices 
 
 
 
 // ------- Exercice 1 ------- 
 
-	// Écrire une fonction de prototype int puissance(int a, int b) qui calcule, a puissance b
-	// a et b étant des entiers et qui renvoie le résultat au programme appelant.
-	// Dans main(), demandez à l’utilisateur d’entrer 2 valeurs x et y, puis grâce à la fonction
-	// puissance vous calculerez xpuissy et vous afficherez le résultat obtenu
+	// Ecrire une fonction de prototype int puissance(int a, int b) qui calcule, a puissance b
+	// a et b etant des entiers et qui renvoie le résultat au programme appelant.
+	// Dans main(), demandez a l utilisateur d’entrer 2 valeurs x et y, puis grace a la fonction
+	// puissance vous calculerez xpuissy et vous afficherez le resultat obtenu.
 
 /*
 int puissance(int a, int b)
@@ -51,10 +49,10 @@ int main(int argc, char ** argv)
 
 // ------- Exercice 2 ------- 
 
-	// Un programme contient la déclaration suivante :
+	// Un programme contient la declaration suivante :
 	// int tab[10] = { 1,2,4,8,16,32,64,128,256,512 };
-	// Ecrire une fonction de prototype void affiche(int *t) qui affiche les éléments du tableau, et
-	// leur position; la mettre en œuvre dans main().
+	// Ecrire une fonction de prototype void affiche(int *t) qui affiche les elements du tableau, 
+	// et leur position; la mettre en oeuvre dans main().
 
 /*
 void affiche(int *tab, int n)
@@ -68,8 +66,8 @@ void affiche(int *tab, int n)
 
 int main(int argc, char ** argv)
 {
-	int tab[10] = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }; // paramètres du tableau 
-	affiche(tab, 10); // on affiche le tableau jusqu'à sa 10ème valeur 
+	int tab[10] = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }; // parametres du tableau 
+	affiche(tab, 10); // on affiche le tableau jusqu a sa 10eme valeur 
 }
 */
 
@@ -80,7 +78,7 @@ int main(int argc, char ** argv)
 	// Float liste[8] = { 1.6,-6.9,9.67,5.90,345,-23.6,78,34.6 };
 	// Ecrire une fonction de prototype float min(float* tab) qui renvoie le minimum de la liste.
 	// Ecrire une fonction de prototype float max(float *tab) qui renvoie le maximum de la liste.
-	// Les mettre en œuvre dans main().
+	// Les mettre en oeuvre dans main().
 
 /*
 float min(float*tab, int n)
@@ -124,8 +122,8 @@ int main(int argc, char ** argv)
 
 // ------- Exercice 4 -------
 
-	// Ecrire une fonction qui calcule le pgcd de deux nombres initialisés dans le programme
-	// principal par l’utilisateur. La mettre en œuvre dans main()
+	// Ecrire une fonction qui calcule le pgcd de deux nombres initialises dans le programme
+	// principal par l utilisateur. La mettre en oeuvre dans main().
 
 /*
  fonction euclide(a, b)
@@ -162,8 +160,8 @@ int main(int argc, char ** argv)
 	
 // ------- Exercice 5 -------
 
-	// Ecrire une fonction qui calcule n ! c'est-à-dire : n != n*(n-1)*(n-2)*…3*2*1, avec n>=0 et 0 != 1
-	// Avec n unsigned, int passé en paramètre et initialisé dans le programme principal par l’utilisateur.
+	// Ecrire une fonction qui calcule n ! c'est-a-dire : n != n*(n-1)*(n-2)*…3*2*1, avec n>=0 et 0 != 1
+	// Avec n unsigned, int passe en paramètre et initialise dans le programme principal par l utilisateur.
 
 /*
 unsigned long long factorielle(unsigned long long n);
@@ -192,7 +190,7 @@ int main(int argc, char** argv)
 // ------- Exercice 6 -------
 
 	// Ecrire une fonction de prototype « void inverse(char *ch) » qui permette de convertir un texte,
-	// c’est à dire qui inverse le contenu d’une chaine de caractères. La mettre en œuvre dans main().
+	// c est a dire qui inverse le contenu d une chaine de caracteres. La mettre en oeuvre dans main().
 	// Ex :
 	// "il fait beau" va donner "uaeb tiaf li"
 
