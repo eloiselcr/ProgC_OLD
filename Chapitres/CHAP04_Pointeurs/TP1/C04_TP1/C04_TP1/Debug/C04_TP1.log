@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\formation\source\repos\c04_tp1\c04_tp1\source.cpp(67): warning C4477: 'printf' : la chaîne de format '%.2d' nécessite un argument de type 'int', mais l'argument variadique 1 est de type 'int *'
+c:\users\formation\source\repos\c04_tp1\c04_tp1\source.cpp(67): warning C4477: 'printf' : la chaîne de format '%p' nécessite un argument de type 'void *', mais l'argument variadique 2 est de type 'int'
+  C04_TP1.vcxproj -> C:\Users\formation\source\repos\C04_TP1\Debug\C04_TP1.exe
