@@ -21,14 +21,16 @@
 int main(int argc, char ** argv)
 {
 	FILE * fichier;
-	fichier = fopen(", "r+");
+	int compteur;
+
+	fichier = fopen("sources.txt", "r+");	if (fichier == NULL)	{		puts("Fichier introuvable ou inexistant.\n");		exit(1);	}	while ((compteur = getc(fichier)) != EOF)	{		putc(compteur);	}		fclose(fichier);	return(0);
 }
 
 // ------- Exercice 2 ------- 
 
-	// Avec une application ecrite en C, vous allez ouvrir le fichier « source.txt » en lecture, et
-	// afficher son contenu caractere par caractere à l ecran a l aide de la fonction getc.
-	// Refermez ensuite le fichier.
+	// Ouvrir le fichier « source.txt » en lecture, et un fichier que vous nommerez « dest1.txt » en
+	// ecriture, puis copier chaque caractere du fichier source dans le fichier de destination.
+	// Refermez le fichier.
 
 
 // ------- Exercice 3 ------- 
