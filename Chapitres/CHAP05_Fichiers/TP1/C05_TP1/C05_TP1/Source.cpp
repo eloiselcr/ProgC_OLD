@@ -23,7 +23,7 @@ int main(int argc, char ** argv)
 	FILE * fichier;
 	int compteur;
 
-	fichier = fopen("sources.txt", "r+");	if (fichier == NULL)	{		puts("Fichier introuvable ou inexistant.\n");		exit(1);	}	while ((compteur = getc(fichier)) != EOF)	{		putc(compteur);	}		fclose(fichier);	return(0);
+	fichier = fopen("sources.txt", "r+");	if (fichier == NULL)	{		putc("Fichier introuvable ou inexistant.\n");		exit(1);	}	while ((compteur = getc(fichier)) != EOF)	{		putc(compteur);	}		fclose(fichier);	return(0);
 }
 
 // ------- Exercice 2 ------- 

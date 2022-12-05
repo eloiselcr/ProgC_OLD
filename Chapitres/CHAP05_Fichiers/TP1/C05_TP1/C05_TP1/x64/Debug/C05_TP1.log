@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Eloise\Documents\BTS_SN\Informatique\Gremont\ProgC\Chapitres\CHAP05_Fichiers\TP1\C05_TP1\C05_TP1\Source.cpp(26,175): error C2660: 'putc' : la fonction ne prend pas 1 arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h(347,26): message : voir la déclaration de 'putc'
+C:\Users\Eloise\Documents\BTS_SN\Informatique\Gremont\ProgC\Chapitres\CHAP05_Fichiers\TP1\C05_TP1\C05_TP1\Source.cpp(26,175): message : lors de la tentative de mise en correspondance de la liste des arguments '(int)'
