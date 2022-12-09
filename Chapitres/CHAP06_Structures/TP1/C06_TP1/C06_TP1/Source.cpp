@@ -92,6 +92,8 @@ int main(int argc, char ** argv)
 }
 */
 
+/*
+
 typedef struct abscisse
 {
 	int abscisse1;
@@ -200,8 +202,11 @@ void initordonné(ordonné* p)
 	printf("veuillez saisir l'ordonné :");
 	scanf("%d", &p->ordonné15);
 }
+*/
+
 int main()
 {
+	/*
 	abscisse c1;
 	ordonné p1;
 	initordonné(&p1);
@@ -222,6 +227,12 @@ int main()
 	printf("\n votre point a pour cordonné  : %d  %d", c1.abscisse13, p1.ordonné13);
 	printf("\n votre point a pour cordonné  : %d  %d", c1.abscisse14, p1.ordonné14);
 	printf("\n votre point a pour cordonné  : %d  %d", c1.abscisse15, p1.ordonné15);
+	*/
+
+	for (int i = 0; i != -1; i++)
+	{
+		printf("I = %d", i);
+	}
 }
 
 
