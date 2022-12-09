@@ -1,2 +1,2 @@
 ﻿  Source.cpp
-  C05_TP1.vcxproj -> C:\Users\elois\Documents\BTS_SN\Info\Gremont\ProgC\Chapitres\CHAP05_Fichiers\TP1\C05_TP1\Debug\C05_TP1.exe
+C:\Users\Eloise\Documents\BTS_SN\Informatique\Gremont\ProgC\Chapitres\CHAP05_Fichiers\TP1\C05_TP1\C05_TP1\Source.cpp(260): error C4700: variable locale 'c' non initialisée utilisée

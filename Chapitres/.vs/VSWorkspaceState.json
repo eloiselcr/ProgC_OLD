@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CHAP04_Pointeurs",
-    "\\CHAP04_Pointeurs\\TP1"
+    "\\CHAP04_Pointeurs\\TP1",
+    "\\CHAP05_Fichiers",
+    "\\CHAP05_Fichiers\\TP1",
+    "\\CHAP05_Fichiers\\TP1\\C05_TP1"
   ],
-  "SelectedNode": "\\CHAP04_Pointeurs\\TP1",
+  "SelectedNode": "\\CHAP05_Fichiers\\TP1\\C05_TP1\\C05_TP1.sln",
   "PreviewInSolutionExplorer": false
 }
