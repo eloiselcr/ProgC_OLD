@@ -18,6 +18,7 @@
 /*
 int main(int argv, char ** argc){	FILE * fichier = fopen("source.txt", "r");
 
+<<<<<<< HEAD
 	if (fichier != NULL) // fichier trouvé
 	{
 		char c;
@@ -35,6 +36,9 @@ int main(int argv, char ** argc){	FILE * fichier = fopen("source.txt", "r");
 	}
 
 	return(0);
+=======
+	fichier = fopen("sources.txt", "r+");	if (fichier == NULL)	{		putc("Fichier introuvable ou inexistant.\n");		exit(1);	}	while ((compteur = getc(fichier)) != EOF)	{		putc(compteur);	}		fclose(fichier);	return(0);
+>>>>>>> 46d56a5a0381c4b2102c02d0111374b08705fac8
 }
 */
 
